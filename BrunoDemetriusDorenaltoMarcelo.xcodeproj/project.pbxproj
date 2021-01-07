@@ -12,6 +12,8 @@
 		C7A38E6425A675BB0040B7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A38E6225A675BB0040B7DB /* Main.storyboard */; };
 		C7A38E6625A675BC0040B7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A38E6525A675BC0040B7DB /* Assets.xcassets */; };
 		C7A38E6925A675BC0040B7DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A38E6725A675BC0040B7DB /* LaunchScreen.storyboard */; };
+		C7A38E7A25A681380040B7DB /* ProductsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E7925A681380040B7DB /* ProductsTableViewController.swift */; };
+		C7A38E7E25A68B5E0040B7DB /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E7D25A68B5E0040B7DB /* ProductTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		C7A38E6525A675BC0040B7DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7A38E6825A675BC0040B7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C7A38E6A25A675BC0040B7DB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C7A38E7925A681380040B7DB /* ProductsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsTableViewController.swift; sourceTree = "<group>"; };
+		C7A38E7D25A68B5E0040B7DB /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +58,56 @@
 		C7A38E5B25A675BB0040B7DB /* BrunoDemetriusDorenaltoMarcelo */ = {
 			isa = PBXGroup;
 			children = (
-				C7A38E5C25A675BB0040B7DB /* AppDelegate.swift */,
+				C7A38E7725A680CE0040B7DB /* ProductListing */,
+				C7A38E7325A67D150040B7DB /* Main */,
+				C7A38E7425A67D1E0040B7DB /* Supporting Files */,
 				C7A38E6025A675BB0040B7DB /* ViewController.swift */,
 				C7A38E6225A675BB0040B7DB /* Main.storyboard */,
+			);
+			path = BrunoDemetriusDorenaltoMarcelo;
+			sourceTree = "<group>";
+		};
+		C7A38E7325A67D150040B7DB /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C7A38E5C25A675BB0040B7DB /* AppDelegate.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		C7A38E7425A67D1E0040B7DB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				C7A38E6525A675BC0040B7DB /* Assets.xcassets */,
 				C7A38E6725A675BC0040B7DB /* LaunchScreen.storyboard */,
 				C7A38E6A25A675BC0040B7DB /* Info.plist */,
 			);
-			path = BrunoDemetriusDorenaltoMarcelo;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C7A38E7725A680CE0040B7DB /* ProductListing */ = {
+			isa = PBXGroup;
+			children = (
+				C7A38E7C25A68B2C0040B7DB /* View */,
+				C7A38E7825A680E40040B7DB /* Controller */,
+			);
+			path = ProductListing;
+			sourceTree = "<group>";
+		};
+		C7A38E7825A680E40040B7DB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C7A38E7925A681380040B7DB /* ProductsTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		C7A38E7C25A68B2C0040B7DB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C7A38E7D25A68B5E0040B7DB /* ProductTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,6 +182,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7A38E6125A675BB0040B7DB /* ViewController.swift in Sources */,
+				C7A38E7E25A68B5E0040B7DB /* ProductTableViewCell.swift in Sources */,
+				C7A38E7A25A681380040B7DB /* ProductsTableViewController.swift in Sources */,
 				C7A38E5D25A675BB0040B7DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,7 +332,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BrunoDemetriusDorenaltoMarcelo/Info.plist;
+				INFOPLIST_FILE = "BrunoDemetriusDorenaltoMarcelo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -303,7 +351,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = BrunoDemetriusDorenaltoMarcelo/Info.plist;
+				INFOPLIST_FILE = "BrunoDemetriusDorenaltoMarcelo/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
