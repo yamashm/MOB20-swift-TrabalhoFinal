@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,7 +18,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 
-   
-
+    // MARK: - Core Data Stack
+    lazy var persistentContainer: NSPersistentContainer = {
+        let container = NSPersistentContainer(name: "BrunoDemetriusDorenaltoMarcelo")
+        container.loadPersistentStores { (storeDescription, error) in
+            if let error = error {
+                print(error)
+            }
+        }
+        return container
+    }()
 }
 

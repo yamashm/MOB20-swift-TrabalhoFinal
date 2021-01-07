@@ -11,9 +11,9 @@ import UIKit
 class ProductTableViewCell: UITableViewCell {
 
     // MARK: - IBOutlets
-    @IBOutlet weak var imageViewProduct: UIImageView!
     @IBOutlet weak var labelName: UILabel!
     @IBOutlet weak var labelPrice: UILabel!
+    @IBOutlet weak var imageViewPoster: UIImageView!
     
     // MARK: - Methods
     
