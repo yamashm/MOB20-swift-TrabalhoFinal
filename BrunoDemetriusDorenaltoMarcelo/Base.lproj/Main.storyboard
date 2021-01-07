@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5bQ-uA-vXX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cd9-5U-XZP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -94,7 +94,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="r16-p1-dHC">
-                                <rect key="frame" x="16" y="112" width="382" height="479"/>
+                                <rect key="frame" x="16" y="112" width="382" height="431"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Nome do produto" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eCB-bd-M54">
                                         <rect key="frame" x="0.0" y="0.0" width="382" height="34"/>
@@ -102,13 +102,13 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZDf-Gz-gq9">
-                                        <rect key="frame" x="0.0" y="49" width="382" height="256"/>
+                                        <rect key="frame" x="0.0" y="49" width="382" height="224"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="256" id="leY-zz-EhE"/>
+                                            <constraint firstAttribute="height" constant="224" id="leY-zz-EhE"/>
                                         </constraints>
                                     </imageView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XPn-7e-TnR">
-                                        <rect key="frame" x="0.0" y="320" width="382" height="34"/>
+                                        <rect key="frame" x="0.0" y="288" width="382" height="34"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado da compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q1R-H9-RhN">
                                                 <rect key="frame" x="0.0" y="0.0" width="340" height="34"/>
@@ -124,7 +124,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="DdB-AV-bbA">
-                                        <rect key="frame" x="0.0" y="369" width="382" height="31"/>
+                                        <rect key="frame" x="0.0" y="337" width="382" height="31"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxv-ym-7xA">
                                                 <rect key="frame" x="0.0" y="0.0" width="231" height="31"/>
@@ -148,10 +148,10 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9d-7K-2vJ">
-                                        <rect key="frame" x="0.0" y="415" width="382" height="64"/>
+                                        <rect key="frame" x="0.0" y="383" width="382" height="48"/>
                                         <color key="backgroundColor" name="AccentColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="64" id="rHS-1B-zf4"/>
+                                            <constraint firstAttribute="height" constant="48" id="rHS-1B-zf4"/>
                                         </constraints>
                                         <state key="normal" title="CADASTRAR">
                                             <color key="titleColor" systemColor="secondarySystemGroupedBackgroundColor"/>
@@ -174,10 +174,62 @@
             </objects>
             <point key="canvasLocation" x="1163.768115942029" y="103.79464285714285"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Ajustes-->
+        <scene sceneID="yVv-mO-YY5">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UQ4-ZR-fYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="vGe-PF-o5O" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="OHX-Ug-lYk">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RbN-yJ-93u"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Ajustes" image="gearshape.2.fill" catalog="system" id="SII-hH-vMT"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-1387" y="104"/>
+        </scene>
+        <!--Total da Compra-->
+        <scene sceneID="3ug-uQ-Lmf">
+            <objects>
+                <viewController id="aaM-De-2nj" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aNJ-cD-lWA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="tIG-CC-3AZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Total da Compra" image="case.fill" catalog="system" id="unI-7J-uV7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="six-Tb-ozN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2149" y="104"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="XY8-AY-9TV">
+            <objects>
+                <tabBarController id="Cd9-5U-XZP" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="q1J-4x-L0n">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="5bQ-uA-vXX" kind="relationship" relationship="viewControllers" id="flX-TM-sst"/>
+                        <segue destination="vGe-PF-o5O" kind="relationship" relationship="viewControllers" id="eC2-cW-XD0"/>
+                        <segue destination="aaM-De-2nj" kind="relationship" relationship="viewControllers" id="vHp-2F-sou"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qds-Uh-K1v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1388" y="-832"/>
+        </scene>
+        <!--Compras-->
         <scene sceneID="vwF-gJ-Dam">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="5bQ-uA-vXX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Compras" image="case.fill" catalog="system" id="R0M-cf-6gI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qlp-2D-uNg">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -194,6 +246,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="case.fill" catalog="system" width="128" height="98"/>
+        <image name="gearshape.2.fill" catalog="system" width="128" height="100"/>
         <namedColor name="AccentColor">
             <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
