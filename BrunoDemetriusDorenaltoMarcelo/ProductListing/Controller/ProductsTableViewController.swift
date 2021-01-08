@@ -61,7 +61,9 @@ class ProductsTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ProductTableViewCell else {
+            return UITableViewCell()
+        }
 
         let product = fetchedResultsController.object(at: indexPath)
         cell.configure(with: product)
