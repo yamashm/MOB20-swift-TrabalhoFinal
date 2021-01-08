@@ -202,6 +202,7 @@
                     <connections>
                         <outlet property="buttonSave" destination="d9d-7K-2vJ" id="5IX-6m-AUn"/>
                         <outlet property="imageViewPoster" destination="ZDf-Gz-gq9" id="Sdg-My-OIl"/>
+                        <outlet property="scrollView" destination="Vv8-rP-8bb" id="eBY-lU-ZVD"/>
                         <outlet property="textFieldName" destination="eCB-bd-M54" id="1vq-2z-9ij"/>
                         <outlet property="textFieldState" destination="q1R-H9-RhN" id="cd2-Cw-N86"/>
                         <outlet property="textFieldValue" destination="hxv-ym-7xA" id="L14-JE-JQq"/>

@@ -17,7 +17,7 @@ class ProductFormViewController: UIViewController {
     @IBOutlet weak var textFieldValue: UITextField!
     @IBOutlet weak var imageViewPoster: UIImageView!
     @IBOutlet weak var buttonSave: UIButton!
-    
+    @IBOutlet weak var scrollView: UIScrollView!
     // MARK: - Properties
     
     
@@ -28,6 +28,19 @@ class ProductFormViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           //Observar o evento do teclado aparecer
+           NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+           //Observa o evento do teclado desaparecer
+           NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+       }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        NotificationCenter.default.removeObserver(self)
+    }
+    
     // MARK: - IBActions
     
     @IBAction func save(_ sender: UIButton) {
@@ -35,6 +48,18 @@ class ProductFormViewController: UIViewController {
     
     // MARK: - Methods
 
+    @objc
+    private func keyboardWillShow(notification: NSNotification){
+        guard let userInfo = notification.userInfo, let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {return}
+        //Altera o espaco na base da scrollview com base na altura do teclado tirando a safearea
+        scrollView.contentInset.bottom = keyboardFrame.size.height - view.safeAreaInsets.bottom
+        scrollView.verticalScrollIndicatorInsets.bottom  = keyboardFrame.size.height - view.safeAreaInsets.bottom
+    }
     
+    @objc
+    private func keyboardWillHide(){
+        scrollView.contentInset.bottom = 0
+        scrollView.verticalScrollIndicatorInsets.bottom  = 0
+    }
 
 }
