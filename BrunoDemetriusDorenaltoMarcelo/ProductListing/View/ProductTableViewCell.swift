@@ -16,6 +16,8 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var imageViewPoster: UIImageView!
     
     // MARK: - Methods
-    
+    func configure(with product: Product){
+        
+    }
 
 }

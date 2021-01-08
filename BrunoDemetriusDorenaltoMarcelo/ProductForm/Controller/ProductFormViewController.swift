@@ -18,13 +18,14 @@ class ProductFormViewController: UIViewController {
     @IBOutlet weak var imageViewPoster: UIImageView!
     @IBOutlet weak var buttonSave: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
-    // MARK: - Properties
     
+    // MARK: - Properties
+    var product: Product?
     
     // MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupView()
         // Do any additional setup after loading the view.
     }
     
@@ -44,10 +45,17 @@ class ProductFormViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func save(_ sender: UIButton) {
+        if product == nil {
+            product = Product(context: context)
+        }
+        product?.name = textFieldName.text
     }
     
     // MARK: - Methods
-
+    private func setupView(){
+        
+    }
+    
     @objc
     private func keyboardWillShow(notification: NSNotification){
         guard let userInfo = notification.userInfo, let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {return}
