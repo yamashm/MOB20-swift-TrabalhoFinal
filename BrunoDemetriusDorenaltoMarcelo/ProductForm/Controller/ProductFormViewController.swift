@@ -12,6 +12,11 @@ class ProductFormViewController: UIViewController {
 
     // MARK: - IBOutlets
     
+    @IBOutlet weak var textFieldName: UITextField!
+    @IBOutlet weak var textFieldState: UITextField!
+    @IBOutlet weak var textFieldValue: UITextField!
+    @IBOutlet weak var imageViewPoster: UIImageView!
+    @IBOutlet weak var buttonSave: UIButton!
     
     // MARK: - Properties
     
@@ -25,6 +30,8 @@ class ProductFormViewController: UIViewController {
     
     // MARK: - IBActions
     
+    @IBAction func save(_ sender: UIButton) {
+    }
     
     // MARK: - Methods
 
