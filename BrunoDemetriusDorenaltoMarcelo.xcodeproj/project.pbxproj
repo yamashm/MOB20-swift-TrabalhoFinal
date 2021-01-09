@@ -17,6 +17,7 @@
 		C7A38E7E25A68B5E0040B7DB /* ProductTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E7D25A68B5E0040B7DB /* ProductTableViewCell.swift */; };
 		C7A38E8525A699C30040B7DB /* BrunoDemetriusDorenaltoMarcelo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E8325A699C30040B7DB /* BrunoDemetriusDorenaltoMarcelo.xcdatamodeld */; };
 		C7A38E8A25A6A93C0040B7DB /* ProductFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E8925A6A93C0040B7DB /* ProductFormViewController.swift */; };
+		C7B05A1425AA309000C9E594 /* SettingsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B05A1325AA309000C9E594 /* SettingsFormViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		C7A38E7D25A68B5E0040B7DB /* ProductTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewCell.swift; sourceTree = "<group>"; };
 		C7A38E8425A699C30040B7DB /* BrunoDemetriusDorenaltoMarcelo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BrunoDemetriusDorenaltoMarcelo.xcdatamodel; sourceTree = "<group>"; };
 		C7A38E8925A6A93C0040B7DB /* ProductFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFormViewController.swift; sourceTree = "<group>"; };
+		C7B05A1325AA309000C9E594 /* SettingsFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFormViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 		C7A38E5B25A675BB0040B7DB /* BrunoDemetriusDorenaltoMarcelo */ = {
 			isa = PBXGroup;
 			children = (
+				C7B05A1125AA2FA400C9E594 /* SettingsForm */,
 				C7A38E8725A6A8EA0040B7DB /* ProductForm */,
 				C7A38E8225A6994D0040B7DB /* Files */,
 				C7A38E8025A692AB0040B7DB /* Extensions */,
@@ -151,6 +154,22 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		C7B05A1125AA2FA400C9E594 /* SettingsForm */ = {
+			isa = PBXGroup;
+			children = (
+				C7B05A1225AA2FB000C9E594 /* Controller */,
+			);
+			path = SettingsForm;
+			sourceTree = "<group>";
+		};
+		C7B05A1225AA2FB000C9E594 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C7B05A1325AA309000C9E594 /* SettingsFormViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -228,6 +247,7 @@
 				C799043A25A7F72600B8005D /* UIViewController+Context.swift in Sources */,
 				C7A38E7E25A68B5E0040B7DB /* ProductTableViewCell.swift in Sources */,
 				C7A38E7A25A681380040B7DB /* ProductsTableViewController.swift in Sources */,
+				C7B05A1425AA309000C9E594 /* SettingsFormViewController.swift in Sources */,
 				C7A38E5D25A675BB0040B7DB /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

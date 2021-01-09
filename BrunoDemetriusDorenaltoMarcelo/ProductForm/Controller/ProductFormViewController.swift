@@ -15,12 +15,15 @@ class ProductFormViewController: UIViewController {
     @IBOutlet weak var textFieldName: UITextField!
     @IBOutlet weak var textFieldState: UITextField!
     @IBOutlet weak var textFieldValue: UITextField!
-    @IBOutlet weak var imageViewPoster: UIImageView!
     @IBOutlet weak var buttonSave: UIButton!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var buttonState: UIButton!
+    @IBOutlet weak var switchCard: UISwitch!
+    @IBOutlet weak var buttonPoster: UIButton!
     
     // MARK: - Properties
     var product: Product?
+
     
     // MARK: - Super Methods
     override func viewDidLoad() {
@@ -44,16 +47,56 @@ class ProductFormViewController: UIViewController {
     
     // MARK: - IBActions
     
+    @IBAction func selectImage(_ sender: UIButton) {
+        let alert = UIAlertController(title: "Selecionar poster", message: "De onde voce quer escolher o poster?", preferredStyle: .actionSheet)
+        
+        if UIImagePickerController.isSourceTypeAvailable(.camera){
+                let cameraAction = UIAlertAction(title: "Camera", style: .default) { (_) in
+                    // codigo quando clicar no botao camera
+                    self.selectPictureFrom(.camera)
+                }
+                alert.addAction(cameraAction)
+                }
+                
+                let libraryAction = UIAlertAction(title: "Biblioteca de fotos", style: .default) { (_) in
+                     self.selectPictureFrom(.photoLibrary)
+                }
+                alert.addAction(libraryAction)
+                
+                let photosAction = UIAlertAction(title: "Album de fotos", style: .default) { (_) in
+                    self.selectPictureFrom(.savedPhotosAlbum)
+                }
+                alert.addAction(photosAction)
+                
+                let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+                alert.addAction(cancelAction)
+                
+                present(alert, animated: true, completion: nil)
+    }
+    
     @IBAction func save(_ sender: UIButton) {
         if product == nil {
             product = Product(context: context)
         }
         product?.name = textFieldName.text
+        product?.image = buttonPoster.currentImage?.pngData()
+        //product?.state = selected
     }
     
     // MARK: - Methods
+    private func selectPictureFrom(_ sourceType: UIImagePickerController.SourceType){
+           let imagePickerController = UIImagePickerController()
+           imagePickerController.sourceType = sourceType
+           imagePickerController.delegate = self
+           present(imagePickerController, animated: true, completion: nil)
+       }
+    
     private func setupView(){
-        
+        if let product = product{
+            textFieldName.text = product.name
+            buttonSave.setTitle("Alterar", for: .normal)
+            //imageViewPoster.image = product.image
+        }
     }
     
     @objc
@@ -71,3 +114,15 @@ class ProductFormViewController: UIViewController {
     }
 
 }
+
+extension ProductFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        
+        if let image = info[.originalImage] as? UIImage{
+            buttonPoster.setImage(image, for: .normal)
+        }
+        dismiss(animated: true, completion: nil)
+    }
+}
+
+
