@@ -130,6 +130,9 @@
                                                                 <constraints>
                                                                     <constraint firstAttribute="width" constant="32" id="fUm-T2-cbu"/>
                                                                 </constraints>
+                                                                <connections>
+                                                                    <segue destination="vGe-PF-o5O" kind="show" id="30v-Fm-j8I"/>
+                                                                </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
@@ -221,7 +224,7 @@
         <!--Ajustes-->
         <scene sceneID="yVv-mO-YY5">
             <objects>
-                <viewController id="vGe-PF-o5O" sceneMemberID="viewController">
+                <viewController id="vGe-PF-o5O" customClass="SettingsFormViewController" customModule="BrunoDemetriusDorenaltoMarcelo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OHX-Ug-lYk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -231,7 +234,7 @@
                                 <state key="normal" title="Adicionar estado"/>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="bottom" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="Rdv-XR-sPa">
-                                <rect key="frame" x="20" y="108" width="374" height="579"/>
+                                <rect key="frame" x="20" y="120" width="374" height="567"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="2ho-0N-7Mm">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="84"/>
@@ -280,8 +283,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="FLj-hg-whx">
-                                        <rect key="frame" x="0.0" y="136.5" width="374" height="442.5"/>
+                                        <rect key="frame" x="0.0" y="136.5" width="374" height="430.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <view key="tableFooterView" contentMode="scaleToFill" id="bkn-zQ-fAQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="44"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
                                     </tableView>
                                 </subviews>
                                 <constraints>
@@ -303,14 +311,21 @@
                             <constraint firstItem="RbN-yJ-93u" firstAttribute="bottom" secondItem="HYX-sB-0s3" secondAttribute="bottom" constant="48" id="a3J-RW-LAV"/>
                             <constraint firstItem="HYX-sB-0s3" firstAttribute="leading" secondItem="RbN-yJ-93u" secondAttribute="leading" constant="20" id="goa-lY-ODB"/>
                             <constraint firstItem="RbN-yJ-93u" firstAttribute="trailing" secondItem="HYX-sB-0s3" secondAttribute="trailing" constant="20" id="uBK-Oz-lTz"/>
-                            <constraint firstItem="Rdv-XR-sPa" firstAttribute="top" secondItem="RbN-yJ-93u" secondAttribute="top" constant="64" id="ueb-gk-OI6"/>
+                            <constraint firstItem="Rdv-XR-sPa" firstAttribute="top" secondItem="RbN-yJ-93u" secondAttribute="top" constant="32" id="ueb-gk-OI6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ajustes" image="gearshape.2.fill" catalog="system" id="SII-hH-vMT"/>
+                    <navigationItem key="navigationItem" id="YKf-sF-UWY"/>
+                    <connections>
+                        <outlet property="buttonAddState" destination="HYX-sB-0s3" id="Fqg-uI-TCx"/>
+                        <outlet property="tableViewStateTax" destination="FLj-hg-whx" id="eaW-yo-dWk"/>
+                        <outlet property="textFieldTax" destination="OmH-s9-iJv" id="Di5-Da-9ID"/>
+                        <outlet property="textFieldXRate" destination="oaN-T8-SAP" id="WC8-aQ-c8z"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UQ4-ZR-fYS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1388.4057971014495" y="103.79464285714285"/>
+            <point key="canvasLocation" x="-1388" y="821"/>
         </scene>
         <!--Total da Compra-->
         <scene sceneID="3ug-uQ-Lmf">
@@ -413,6 +428,9 @@
             <point key="canvasLocation" x="-626.08695652173913" y="103.79464285714285"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="30v-Fm-j8I"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="Presente" width="1017" height="598"/>
         <image name="case.fill" catalog="system" width="128" height="98"/>

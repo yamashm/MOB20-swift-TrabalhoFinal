@@ -10,6 +10,13 @@ import UIKit
 
 class SettingsFormViewController: UIViewController {
 
+    // MARK: - IBOutlets
+    
+    @IBOutlet weak var textFieldXRate: UITextField!
+    @IBOutlet weak var buttonAddState: UIButton!
+    @IBOutlet weak var textFieldTax: UITextField!
+    @IBOutlet weak var tableViewStateTax: UITableView!
+    
     // MARK: - Properties
     let label: UILabel = {
            let label = UILabel(frame: .zero)

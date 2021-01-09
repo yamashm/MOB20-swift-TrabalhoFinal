@@ -8,12 +8,11 @@
     </entity>
     <entity name="State" representedClassName="State" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String"/>
-        <attribute name="quotation" attributeType="Decimal" defaultValueString="0.0"/>
         <attribute name="tax" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="state" inverseEntity="Product"/>
     </entity>
     <elements>
         <element name="Product" positionX="-364" positionY="-28" width="128" height="103"/>
-        <element name="State" positionX="-54" positionY="18" width="128" height="103"/>
+        <element name="State" positionX="-54" positionY="18" width="128" height="88"/>
     </elements>
 </model>
