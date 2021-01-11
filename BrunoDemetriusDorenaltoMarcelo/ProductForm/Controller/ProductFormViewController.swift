@@ -9,7 +9,7 @@
 import UIKit
 
 class ProductFormViewController: UIViewController {
-
+    
     // MARK: - IBOutlets
     
     @IBOutlet weak var textFieldName: UITextField!
@@ -23,7 +23,7 @@ class ProductFormViewController: UIViewController {
     
     // MARK: - Properties
     var product: Product?
-
+    
     
     // MARK: - Super Methods
     override func viewDidLoad() {
@@ -33,12 +33,12 @@ class ProductFormViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
-           //Observar o evento do teclado aparecer
-           NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
-           //Observa o evento do teclado desaparecer
-           NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
-       }
+        super.viewWillAppear(animated)
+        //Observar o evento do teclado aparecer
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        //Observa o evento do teclado desaparecer
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
@@ -51,27 +51,27 @@ class ProductFormViewController: UIViewController {
         let alert = UIAlertController(title: "Selecionar poster", message: "De onde voce quer escolher o poster?", preferredStyle: .actionSheet)
         
         if UIImagePickerController.isSourceTypeAvailable(.camera){
-                let cameraAction = UIAlertAction(title: "Camera", style: .default) { (_) in
-                    // codigo quando clicar no botao camera
-                    self.selectPictureFrom(.camera)
-                }
-                alert.addAction(cameraAction)
-                }
-                
-                let libraryAction = UIAlertAction(title: "Biblioteca de fotos", style: .default) { (_) in
-                     self.selectPictureFrom(.photoLibrary)
-                }
-                alert.addAction(libraryAction)
-                
-                let photosAction = UIAlertAction(title: "Album de fotos", style: .default) { (_) in
-                    self.selectPictureFrom(.savedPhotosAlbum)
-                }
-                alert.addAction(photosAction)
-                
-                let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
-                alert.addAction(cancelAction)
-                
-                present(alert, animated: true, completion: nil)
+            let cameraAction = UIAlertAction(title: "Camera", style: .default) { (_) in
+                // codigo quando clicar no botao camera
+                self.selectPictureFrom(.camera)
+            }
+            alert.addAction(cameraAction)
+        }
+        
+        let libraryAction = UIAlertAction(title: "Biblioteca de fotos", style: .default) { (_) in
+            self.selectPictureFrom(.photoLibrary)
+        }
+        alert.addAction(libraryAction)
+        
+        let photosAction = UIAlertAction(title: "Album de fotos", style: .default) { (_) in
+            self.selectPictureFrom(.savedPhotosAlbum)
+        }
+        alert.addAction(photosAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancelar", style: .cancel, handler: nil)
+        alert.addAction(cancelAction)
+        
+        present(alert, animated: true, completion: nil)
     }
     
     @IBAction func save(_ sender: UIButton) {
@@ -85,11 +85,11 @@ class ProductFormViewController: UIViewController {
     
     // MARK: - Methods
     private func selectPictureFrom(_ sourceType: UIImagePickerController.SourceType){
-           let imagePickerController = UIImagePickerController()
-           imagePickerController.sourceType = sourceType
-           imagePickerController.delegate = self
-           present(imagePickerController, animated: true, completion: nil)
-       }
+        let imagePickerController = UIImagePickerController()
+        imagePickerController.sourceType = sourceType
+        imagePickerController.delegate = self
+        present(imagePickerController, animated: true, completion: nil)
+    }
     
     private func setupView(){
         if let product = product{
@@ -112,7 +112,7 @@ class ProductFormViewController: UIViewController {
         scrollView.contentInset.bottom = 0
         scrollView.verticalScrollIndicatorInsets.bottom  = 0
     }
-
+    
 }
 
 extension ProductFormViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate{

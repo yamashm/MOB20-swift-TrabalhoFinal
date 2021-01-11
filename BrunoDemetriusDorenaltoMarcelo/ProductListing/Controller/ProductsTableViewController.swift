@@ -10,26 +10,26 @@ import UIKit
 import CoreData
 
 class ProductsTableViewController: UITableViewController {
-
+    
     // MARK: - Properties
     let label: UILabel = {
         let label = UILabel(frame: .zero)
         label.text = "Sua lista esta vazia!"
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 16.0)
-           return label
-       }()
+        return label
+    }()
     lazy var fetchedResultsController: NSFetchedResultsController<Product> = {
-            let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
-            let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
-            fetchRequest.sortDescriptors = [sortDescriptor]
-            
-            let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
-            
-            fetchedResultsController.delegate = self
-            
-            return fetchedResultsController
-        }()
+        let fetchRequest: NSFetchRequest<Product> = Product.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+        
+        fetchedResultsController.delegate = self
+        
+        return fetchedResultsController
+    }()
     
     
     // MARK: - Super Methods
@@ -39,8 +39,8 @@ class ProductsTableViewController: UITableViewController {
         loadProducts()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-
-       }
+        
+    }
     
     // MARK: - Methods
     private func loadProducts(){
@@ -52,19 +52,19 @@ class ProductsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         let count = fetchedResultsController.fetchedObjects?.count ?? 0
         tableView.backgroundView = count > 0 ? nil : label
         return count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ProductTableViewCell else {
             return UITableViewCell()
         }
-
+        
         let product = fetchedResultsController.object(at: indexPath)
         cell.configure(with: product)
         
@@ -72,12 +72,12 @@ class ProductsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-           if editingStyle == .delete{
-               let product  = fetchedResultsController.object(at: indexPath)
-               context.delete(product)
-               try? context.save()
-           }
-       }
+        if editingStyle == .delete{
+            let product  = fetchedResultsController.object(at: indexPath)
+            context.delete(product)
+            try? context.save()
+        }
+    }
 }
 
 extension ProductsTableViewController: NSFetchedResultsControllerDelegate {
