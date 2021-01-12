@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ProductFormViewController: UIViewController {
+class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
+
+    
     
     // MARK: - IBOutlets
     
@@ -23,11 +25,32 @@ class ProductFormViewController: UIViewController {
     
     // MARK: - Properties
     var product: Product?
+    var selectedState: State?
+    var states: [State] = []
     
+    let pikerViewState = UIPickerView()
     
     // MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        pikerViewState.dataSource = self
+        pikerViewState.delegate = self
+        
+        let toolBar = UIToolbar()
+        toolBar.barStyle = UIBarStyle.default
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItem.Style.done, target: self, action: #selector(donePicker))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        let cancelButton = UIBarButtonItem(title: "Cancel", style: UIBarButtonItem.Style.plain, target: self, action: #selector(cancelPicker))
+
+        toolBar.setItems([cancelButton, spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        textFieldState.inputView = pikerViewState
+        textFieldState.inputAccessoryView = toolBar
+        
         setupView()
         // Do any additional setup after loading the view.
     }
@@ -80,7 +103,19 @@ class ProductFormViewController: UIViewController {
         }
         product?.name = textFieldName.text
         product?.image = buttonPoster.currentImage?.pngData()
-        //product?.state = selected
+        product?.state = selectedState
+        let value = Double(textFieldValue.text!) ?? 0
+        product?.value = value
+        product?.card = switchCard.isOn
+        
+        view.endEditing(true)
+        
+        do{
+            try context.save()
+            navigationController?.popViewController(animated: true)
+        }catch{
+            print(error)
+        }
     }
     
     // MARK: - Methods
@@ -95,7 +130,7 @@ class ProductFormViewController: UIViewController {
         if let product = product{
             textFieldName.text = product.name
             buttonSave.setTitle("Alterar", for: .normal)
-            //imageViewPoster.image = product.image
+            buttonPoster.setImage(product.poster, for: .normal) 
         }
     }
     
@@ -111,6 +146,27 @@ class ProductFormViewController: UIViewController {
     private func keyboardWillHide(){
         scrollView.contentInset.bottom = 0
         scrollView.verticalScrollIndicatorInsets.bottom  = 0
+    }
+    
+    @objc func donePicker() {
+        let row = pikerViewState.selectedRow(inComponent: 0)
+        pikerViewState.selectRow(row, inComponent: 0, animated: false)
+        textFieldState.text = self.titles[row]
+        textFieldState.resignFirstResponder()
+    }
+
+    @objc func cancelPicker() {
+        textFieldState.text = nil
+        textFieldState.resignFirstResponder()
+    }
+    
+    // MARK: - Picker view data source
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return 1
     }
     
 }

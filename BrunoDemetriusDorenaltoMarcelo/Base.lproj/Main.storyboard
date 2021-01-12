@@ -44,7 +44,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="US$ 9999.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUI-4W-b8J">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="US$ 9999.99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUI-4W-b8J">
                                             <rect key="frame" x="128" y="48" width="256" height="18"/>
                                             <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
                                             <nil key="textColor"/>
@@ -58,6 +58,7 @@
                                         <constraint firstItem="uUI-4W-b8J" firstAttribute="leading" secondItem="Gbj-ls-XUb" secondAttribute="leading" id="Rhr-fa-9Kn"/>
                                         <constraint firstItem="VPY-fa-nzX" firstAttribute="leading" secondItem="fqe-4L-O0F" secondAttribute="leading" constant="12" id="asq-yU-XGa"/>
                                         <constraint firstItem="Gbj-ls-XUb" firstAttribute="top" secondItem="VPY-fa-nzX" secondAttribute="top" id="ksv-5b-Pfb"/>
+                                        <constraint firstItem="uUI-4W-b8J" firstAttribute="top" secondItem="Gbj-ls-XUb" secondAttribute="bottom" constant="17" id="uwj-bY-n7j"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -122,6 +123,7 @@
                                                         <subviews>
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Estado da compra" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q1R-H9-RhN">
                                                                 <rect key="frame" x="0.0" y="0.0" width="332" height="34"/>
+                                                                <gestureRecognizers/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <textInputTraits key="textInputTraits"/>
                                                             </textField>
@@ -218,6 +220,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="74L-YN-0LL"/>
             </objects>
             <point key="canvasLocation" x="1163.768115942029" y="103.79464285714285"/>
         </scene>

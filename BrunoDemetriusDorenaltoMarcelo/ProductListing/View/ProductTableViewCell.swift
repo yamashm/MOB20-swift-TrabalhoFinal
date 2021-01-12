@@ -17,7 +17,9 @@ class ProductTableViewCell: UITableViewCell {
     
     // MARK: - Methods
     func configure(with product: Product){
-        
+        imageViewPoster.image = product.poster
+        labelPrice.text = product.valueFormatted
+        labelName.text = product.name
     }
 
 }
