@@ -7,10 +7,9 @@
 //
 
 import UIKit
+import CoreData
 
 class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate {
-
-    
     
     // MARK: - IBOutlets
     
@@ -51,6 +50,7 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
         textFieldState.inputView = pikerViewState
         textFieldState.inputAccessoryView = toolBar
         
+        loadStates()
         setupView()
         // Do any additional setup after loading the view.
     }
@@ -134,6 +134,18 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
         }
     }
     
+    private func loadStates(){
+        let fetchRequest: NSFetchRequest<State> = State.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        do{
+            states = try context.fetch(fetchRequest)
+        }catch{
+            print(error)
+        }
+    }
+    
     @objc
     private func keyboardWillShow(notification: NSNotification){
         guard let userInfo = notification.userInfo, let keyboardFrame = userInfo[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else {return}
@@ -151,7 +163,7 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
     @objc func donePicker() {
         let row = pikerViewState.selectedRow(inComponent: 0)
         pikerViewState.selectRow(row, inComponent: 0, animated: false)
-        textFieldState.text = self.titles[row]
+        textFieldState.text = states[row].name
         textFieldState.resignFirstResponder()
     }
 
@@ -166,8 +178,16 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return 1
+        return states.count
     }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return states[row].name
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        textFieldState.text = states[row].name
+        }
     
 }
 
