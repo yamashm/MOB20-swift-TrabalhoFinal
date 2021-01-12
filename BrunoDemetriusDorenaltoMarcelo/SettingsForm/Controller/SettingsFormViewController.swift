@@ -15,7 +15,7 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
     
     @IBOutlet weak var textFieldXRate: UITextField!
     @IBOutlet weak var buttonAddState: UIButton!
-    @IBOutlet weak var textFieldTax: UITextField!
+    @IBOutlet weak var textFieldOperationTax: UITextField!
     @IBOutlet weak var tableViewStateTax: UITableView!
     
     // MARK: - Properties
@@ -28,6 +28,8 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
     }()
     var states: [State] = []
     
+    private let ud = UserDefaults.standard
+    
     // MARK: - Super Methods
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,10 +40,26 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
         loadStates()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        setupView()
+    }
+    
     // MARK: - IBActions
     @IBAction func addState(_ sender: UIButton) {
         showStateAlert()
         loadStates()
+    }
+    
+    @IBAction func xrateChanged(_ sender: UITextField) {
+        ud.set(sender.text!, forKey: "xrate")
+        sender.resignFirstResponder()
+    }
+    
+    @IBAction func operationTaxChanged(_ sender: UITextField) {
+        ud.set(sender.text!, forKey: "operationtax")
+        sender.resignFirstResponder()
     }
     
     // MARK: - Methods
@@ -56,8 +74,9 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
         
         alert.addTextField { (textField) in
             textField.placeholder = "Imposto"
+            textField.keyboardType = UIKeyboardType.numbersAndPunctuation
             if let stateContent = state {
-            textField.text = String(format: "%.1f", stateContent.tax)
+                textField.text = String(format: "%.1f", stateContent.tax)
             } else {
                 textField.text = ""
             }
@@ -74,7 +93,7 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
                     }
                 }
             }
-
+            
             do {
                 try self.context.save()
                 self.loadStates()
@@ -101,6 +120,14 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
         }catch{
             print(error)
         }
+    }
+    
+    private func setupView(){
+        let xrate = ud.string(forKey: "xrate")
+        textFieldXRate.text = xrate
+        
+        let operationtax = ud.string(forKey: "operationtax")
+        textFieldOperationTax.text = operationtax
     }
     
     // MARK: - Table view data source

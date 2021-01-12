@@ -39,7 +39,8 @@ class ProductsTableViewController: UITableViewController {
         loadProducts()
     }
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        guard let vc = segue.destination as? ProductFormViewController, let indexPath = tableView.indexPathForSelectedRow else {return}
+        vc.product = fetchedResultsController.object(at: indexPath)
     }
     
     // MARK: - Methods

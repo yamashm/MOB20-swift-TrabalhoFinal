@@ -144,7 +144,7 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxv-ym-7xA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="223" height="31"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                             </textField>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gWQ-Kz-Eyl">
                                                                 <rect key="frame" x="255" y="0.0" width="119" height="31"/>
@@ -271,12 +271,18 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oaN-T8-SAP">
                                                         <rect key="frame" x="0.0" y="0.0" width="169" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <action selector="xrateChanged:" destination="vGe-PF-o5O" eventType="primaryActionTriggered" id="eEO-O1-Thr"/>
+                                                        </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-s9-iJv">
                                                         <rect key="frame" x="0.0" y="50" width="169" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <connections>
+                                                            <action selector="operationTaxChanged:" destination="vGe-PF-o5O" eventType="primaryActionTriggered" id="DJm-ex-ApU"/>
+                                                        </connections>
                                                     </textField>
                                                 </subviews>
                                             </stackView>
@@ -351,7 +357,7 @@
                     <connections>
                         <outlet property="buttonAddState" destination="HYX-sB-0s3" id="Fqg-uI-TCx"/>
                         <outlet property="tableViewStateTax" destination="FLj-hg-whx" id="eaW-yo-dWk"/>
-                        <outlet property="textFieldTax" destination="OmH-s9-iJv" id="Di5-Da-9ID"/>
+                        <outlet property="textFieldOperationTax" destination="OmH-s9-iJv" id="1lv-fS-zqg"/>
                         <outlet property="textFieldXRate" destination="oaN-T8-SAP" id="WC8-aQ-c8z"/>
                     </connections>
                 </viewController>
@@ -362,7 +368,7 @@
         <!--Total da Compra-->
         <scene sceneID="3ug-uQ-Lmf">
             <objects>
-                <viewController id="aaM-De-2nj" sceneMemberID="viewController">
+                <viewController id="aaM-De-2nj" customClass="PurchaseTotalViewController" customModule="BrunoDemetriusDorenaltoMarcelo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aNJ-cD-lWA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -416,6 +422,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Total da Compra" image="case.fill" catalog="system" id="unI-7J-uV7"/>
+                    <connections>
+                        <outlet property="labelTotalBRL" destination="i8l-9H-XF6" id="ivv-1j-Xdh"/>
+                        <outlet property="labelTotalUSD" destination="6WJ-ca-FEm" id="985-nW-DnB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="six-Tb-ozN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -50,9 +50,7 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
         textFieldState.inputView = pikerViewState
         textFieldState.inputAccessoryView = toolBar
         
-        loadStates()
         setupView()
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -61,6 +59,8 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         //Observa o evento do teclado desaparecer
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        loadStates()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -182,6 +182,7 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        selectedState = states[row]
         return states[row].name
     }
     

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C73AD69225AE2C0300F92F92 /* PurchaseTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AD69125AE2C0300F92F92 /* PurchaseTotalViewController.swift */; };
+		C73AD69525AE389800F92F92 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C73AD69425AE389800F92F92 /* Settings.bundle */; };
 		C799043A25A7F72600B8005D /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799043925A7F72600B8005D /* UIViewController+Context.swift */; };
 		C7A38E5D25A675BB0040B7DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E5C25A675BB0040B7DB /* AppDelegate.swift */; };
 		C7A38E6125A675BB0040B7DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E6025A675BB0040B7DB /* ViewController.swift */; };
@@ -19,10 +21,11 @@
 		C7A38E8A25A6A93C0040B7DB /* ProductFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E8925A6A93C0040B7DB /* ProductFormViewController.swift */; };
 		C7AAD7F625AD139900DCA29E /* Product+Poster.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7AAD7F525AD139900DCA29E /* Product+Poster.swift */; };
 		C7B05A1425AA309000C9E594 /* SettingsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7B05A1325AA309000C9E594 /* SettingsFormViewController.swift */; };
-		C7DCF32025ABCC4C00AEC995 /* StateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7DCF31F25ABCC4C00AEC995 /* StateTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C73AD69125AE2C0300F92F92 /* PurchaseTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTotalViewController.swift; sourceTree = "<group>"; };
+		C73AD69425AE389800F92F92 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C799043925A7F72600B8005D /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
 		C7A38E5925A675BB0040B7DB /* BrunoDemetriusDorenaltoMarcelo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrunoDemetriusDorenaltoMarcelo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A38E5C25A675BB0040B7DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -37,7 +40,6 @@
 		C7A38E8925A6A93C0040B7DB /* ProductFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFormViewController.swift; sourceTree = "<group>"; };
 		C7AAD7F525AD139900DCA29E /* Product+Poster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Product+Poster.swift"; sourceTree = "<group>"; };
 		C7B05A1325AA309000C9E594 /* SettingsFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFormViewController.swift; sourceTree = "<group>"; };
-		C7DCF31F25ABCC4C00AEC995 /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +53,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C73AD68F25AE2B7500F92F92 /* PurchaseTotal */ = {
+			isa = PBXGroup;
+			children = (
+				C73AD69025AE2BD500F92F92 /* Controller */,
+			);
+			path = PurchaseTotal;
+			sourceTree = "<group>";
+		};
+		C73AD69025AE2BD500F92F92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C73AD69125AE2C0300F92F92 /* PurchaseTotalViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		C7A38E5025A675BB0040B7DB = {
 			isa = PBXGroup;
 			children = (
@@ -70,6 +88,7 @@
 		C7A38E5B25A675BB0040B7DB /* BrunoDemetriusDorenaltoMarcelo */ = {
 			isa = PBXGroup;
 			children = (
+				C73AD68F25AE2B7500F92F92 /* PurchaseTotal */,
 				C7B05A1125AA2FA400C9E594 /* SettingsForm */,
 				C7A38E8725A6A8EA0040B7DB /* ProductForm */,
 				C7A38E8225A6994D0040B7DB /* Files */,
@@ -139,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				C7A38E8325A699C30040B7DB /* BrunoDemetriusDorenaltoMarcelo.xcdatamodeld */,
+				C73AD69425AE389800F92F92 /* Settings.bundle */,
 			);
 			path = Files;
 			sourceTree = "<group>";
@@ -179,7 +199,6 @@
 		C7DCF31E25ABCC2900AEC995 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C7DCF31F25ABCC4C00AEC995 /* StateTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -242,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C73AD69525AE389800F92F92 /* Settings.bundle in Resources */,
 				C7A38E6925A675BC0040B7DB /* LaunchScreen.storyboard in Resources */,
 				C7A38E6625A675BC0040B7DB /* Assets.xcassets in Resources */,
 				C7A38E6425A675BB0040B7DB /* Main.storyboard in Resources */,
@@ -256,10 +276,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7A38E8525A699C30040B7DB /* BrunoDemetriusDorenaltoMarcelo.xcdatamodeld in Sources */,
+				C73AD69225AE2C0300F92F92 /* PurchaseTotalViewController.swift in Sources */,
 				C7A38E6125A675BB0040B7DB /* ViewController.swift in Sources */,
 				C7A38E8A25A6A93C0040B7DB /* ProductFormViewController.swift in Sources */,
 				C799043A25A7F72600B8005D /* UIViewController+Context.swift in Sources */,
-				C7DCF32025ABCC4C00AEC995 /* StateTableViewCell.swift in Sources */,
 				C7A38E7E25A68B5E0040B7DB /* ProductTableViewCell.swift in Sources */,
 				C7A38E7A25A681380040B7DB /* ProductsTableViewController.swift in Sources */,
 				C7B05A1425AA309000C9E594 /* SettingsFormViewController.swift in Sources */,
