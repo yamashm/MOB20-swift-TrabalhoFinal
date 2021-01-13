@@ -105,12 +105,12 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
             return
         }
         
-        if textFieldValue.text!.isDouble {
+        /*if textFieldValue.text!.isDouble {
             let alert = UIAlertController(title: "Alerta", message: "Valor do produto inválido!", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
             present(alert, animated: true, completion: nil)
             return
-        }
+        }*/
         
         if product == nil {
             product = Product(context: context)
@@ -144,7 +144,11 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
         if let product = product{
             textFieldName.text = product.name
             buttonSave.setTitle("Alterar", for: .normal)
-            buttonPoster.setImage(product.poster, for: .normal) 
+            buttonPoster.setImage(product.poster, for: .normal)
+            textFieldState.text = product.state?.name
+            selectedState = product.state
+            textFieldValue.text = String(format: "%.2f",product.value)
+            switchCard.isOn = product.card
         }
     }
     

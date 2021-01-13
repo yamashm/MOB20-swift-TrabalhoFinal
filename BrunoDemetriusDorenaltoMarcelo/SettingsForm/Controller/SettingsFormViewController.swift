@@ -167,5 +167,10 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
         
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        showStateAlert(for: states[indexPath.row])
+    }
+    
 }
 

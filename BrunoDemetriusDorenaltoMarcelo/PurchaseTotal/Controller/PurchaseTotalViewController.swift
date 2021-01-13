@@ -56,12 +56,13 @@ class PurchaseTotalViewController: UIViewController {
         let operationtaxValue = Double(operationtax!) ?? 0
         
         for p in products {
-            totalUSD += p.value * (1 + p.state!.tax/100)
+            let valueUSD = p.value * (1 + p.state!.tax/100)
+            totalUSD += valueUSD
             
             if p.card {
-                totalBRL += (totalUSD * xrateValue) * (1 + operationtaxValue/100)
+                totalBRL += (valueUSD * xrateValue) * (1 + operationtaxValue/100)
             } else {
-                totalBRL += (totalUSD * xrateValue)
+                totalBRL += (valueUSD * xrateValue)
             }
 
         }
