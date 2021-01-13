@@ -65,6 +65,7 @@
                                     <outlet property="imageViewPoster" destination="VPY-fa-nzX" id="DUJ-r3-JUg"/>
                                     <outlet property="labelName" destination="Gbj-ls-XUb" id="T43-pc-tF0"/>
                                     <outlet property="labelPrice" destination="uUI-4W-b8J" id="Hbz-nd-xPH"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="uZo-H8-1aR"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -472,6 +473,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="30v-Fm-j8I"/>
+        <segue reference="zGf-pr-NRF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Presente" width="1017" height="598"/>
