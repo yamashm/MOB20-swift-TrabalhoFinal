@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C73AD69225AE2C0300F92F92 /* PurchaseTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AD69125AE2C0300F92F92 /* PurchaseTotalViewController.swift */; };
 		C73AD69525AE389800F92F92 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C73AD69425AE389800F92F92 /* Settings.bundle */; };
+		C749CEB125AE77840032637F /* String+isDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749CEB025AE77840032637F /* String+isDouble.swift */; };
 		C799043A25A7F72600B8005D /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799043925A7F72600B8005D /* UIViewController+Context.swift */; };
 		C7A38E5D25A675BB0040B7DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E5C25A675BB0040B7DB /* AppDelegate.swift */; };
 		C7A38E6125A675BB0040B7DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E6025A675BB0040B7DB /* ViewController.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		C73AD69125AE2C0300F92F92 /* PurchaseTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTotalViewController.swift; sourceTree = "<group>"; };
 		C73AD69425AE389800F92F92 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
+		C749CEB025AE77840032637F /* String+isDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isDouble.swift"; sourceTree = "<group>"; };
 		C799043925A7F72600B8005D /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
 		C7A38E5925A675BB0040B7DB /* BrunoDemetriusDorenaltoMarcelo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrunoDemetriusDorenaltoMarcelo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A38E5C25A675BB0040B7DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				C799043925A7F72600B8005D /* UIViewController+Context.swift */,
 				C7AAD7F525AD139900DCA29E /* Product+Poster.swift */,
+				C749CEB025AE77840032637F /* String+isDouble.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7A38E8525A699C30040B7DB /* BrunoDemetriusDorenaltoMarcelo.xcdatamodeld in Sources */,
+				C749CEB125AE77840032637F /* String+isDouble.swift in Sources */,
 				C73AD69225AE2C0300F92F92 /* PurchaseTotalViewController.swift in Sources */,
 				C7A38E6125A675BB0040B7DB /* ViewController.swift in Sources */,
 				C7A38E8A25A6A93C0040B7DB /* ProductFormViewController.swift in Sources */,

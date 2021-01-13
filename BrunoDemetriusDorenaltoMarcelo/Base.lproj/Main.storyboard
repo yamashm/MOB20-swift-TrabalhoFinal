@@ -144,12 +144,12 @@
                                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor (U$)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hxv-ym-7xA">
                                                                 <rect key="frame" x="0.0" y="0.0" width="223" height="31"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                             </textField>
                                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="gWQ-Kz-Eyl">
                                                                 <rect key="frame" x="255" y="0.0" width="119" height="31"/>
                                                                 <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartao?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ju5-Ci-Qe6">
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cartão?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ju5-Ci-Qe6">
                                                                         <rect key="frame" x="0.0" y="0.0" width="60" height="31"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                                         <nil key="textColor"/>
@@ -248,7 +248,7 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="uVM-4y-Oxw">
                                                 <rect key="frame" x="0.0" y="0.0" width="173" height="84"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cotacao do dolar (R$):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM3-Qp-Zid">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cotação do dólar (R$):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zM3-Qp-Zid">
                                                         <rect key="frame" x="0.0" y="0.0" width="173" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
@@ -271,7 +271,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oaN-T8-SAP">
                                                         <rect key="frame" x="0.0" y="0.0" width="169" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                         <connections>
                                                             <action selector="xrateChanged:" destination="vGe-PF-o5O" eventType="primaryActionTriggered" id="eEO-O1-Thr"/>
                                                         </connections>
@@ -279,7 +279,7 @@
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-s9-iJv">
                                                         <rect key="frame" x="0.0" y="50" width="169" height="34"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                         <connections>
                                                             <action selector="operationTaxChanged:" destination="vGe-PF-o5O" eventType="primaryActionTriggered" id="DJm-ex-ApU"/>
                                                         </connections>

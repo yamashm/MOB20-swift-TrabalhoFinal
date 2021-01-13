@@ -98,6 +98,20 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
     }
     
     @IBAction func save(_ sender: UIButton) {
+        if textFieldName.text!.isEmpty || textFieldState.text!.isEmpty || textFieldValue.text!.isEmpty {
+            let alert = UIAlertController(title: "Alerta", message: "Todos os campos devem estar preechidos!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
+        if textFieldValue.text!.isDouble {
+            let alert = UIAlertController(title: "Alerta", message: "Valor do produto inválido!", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+            present(alert, animated: true, completion: nil)
+            return
+        }
+        
         if product == nil {
             product = Product(context: context)
         }

@@ -16,7 +16,7 @@
 			<key>Type</key>
 			<string>PSTextFieldSpecifier</string>
 			<key>Title</key>
-			<string>Cotacao do dolar</string>
+			<string>Cotação do dólar</string>
 			<key>Key</key>
 			<string>xrate</string>
 			<key>DefaultValue</key>
