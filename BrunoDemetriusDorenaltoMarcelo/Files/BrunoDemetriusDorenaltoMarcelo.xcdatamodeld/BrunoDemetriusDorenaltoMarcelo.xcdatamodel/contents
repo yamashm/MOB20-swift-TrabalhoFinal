@@ -5,12 +5,12 @@
         <attribute name="image" attributeType="Binary" allowsExternalBinaryDataStorage="YES"/>
         <attribute name="name" attributeType="String"/>
         <attribute name="value" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="state" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="products" inverseEntity="State"/>
+        <relationship name="state" maxCount="1" deletionRule="Nullify" destinationEntity="State" inverseName="products" inverseEntity="State"/>
     </entity>
     <entity name="State" representedClassName="State" syncable="YES" codeGenerationType="class">
         <attribute name="name" attributeType="String"/>
         <attribute name="tax" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
-        <relationship name="products" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Product" inverseName="state" inverseEntity="Product"/>
+        <relationship name="products" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Product" inverseName="state" inverseEntity="Product"/>
     </entity>
     <elements>
         <element name="Product" positionX="-364" positionY="-28" width="128" height="118"/>

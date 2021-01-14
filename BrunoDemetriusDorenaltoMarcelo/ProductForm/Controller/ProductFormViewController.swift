@@ -181,12 +181,12 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
     @objc func donePicker() {
         let row = pikerViewState.selectedRow(inComponent: 0)
         pikerViewState.selectRow(row, inComponent: 0, animated: false)
+        selectedState = states[row]
         textFieldState.text = states[row].name
         textFieldState.resignFirstResponder()
     }
 
     @objc func cancelPicker() {
-        textFieldState.text = nil
         textFieldState.resignFirstResponder()
     }
     
@@ -200,7 +200,6 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
     }
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
-        selectedState = states[row]
         return states[row].name
     }
     

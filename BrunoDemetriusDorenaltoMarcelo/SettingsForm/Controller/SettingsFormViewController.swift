@@ -37,12 +37,11 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
         tableViewStateTax.delegate = self
         tableViewStateTax.dataSource = self
         
-        loadStates()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        loadStates()
         setupView()
     }
     

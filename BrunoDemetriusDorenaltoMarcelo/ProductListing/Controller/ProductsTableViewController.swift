@@ -36,8 +36,14 @@ class ProductsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         loadProducts()
     }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let vc = segue.destination as? ProductFormViewController, let indexPath = tableView.indexPathForSelectedRow else {return}
         vc.product = fetchedResultsController.object(at: indexPath)
