@@ -7,12 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4169114225BA68D200FCB162 /* ProductFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169114125BA68D200FCB162 /* ProductFormViewModel.swift */; };
+		4169114625BA691C00FCB162 /* CoreDataNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169114525BA691C00FCB162 /* CoreDataNetwork.swift */; };
+		41ACFF4325BA44F000C2BF13 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACFF4225BA44F000C2BF13 /* ProductListViewModel.swift */; };
 		C73AD69225AE2C0300F92F92 /* PurchaseTotalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C73AD69125AE2C0300F92F92 /* PurchaseTotalViewController.swift */; };
 		C73AD69525AE389800F92F92 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C73AD69425AE389800F92F92 /* Settings.bundle */; };
 		C749CEB125AE77840032637F /* String+isDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = C749CEB025AE77840032637F /* String+isDouble.swift */; };
 		C799043A25A7F72600B8005D /* UIViewController+Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = C799043925A7F72600B8005D /* UIViewController+Context.swift */; };
 		C7A38E5D25A675BB0040B7DB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E5C25A675BB0040B7DB /* AppDelegate.swift */; };
-		C7A38E6125A675BB0040B7DB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7A38E6025A675BB0040B7DB /* ViewController.swift */; };
 		C7A38E6425A675BB0040B7DB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A38E6225A675BB0040B7DB /* Main.storyboard */; };
 		C7A38E6625A675BC0040B7DB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7A38E6525A675BC0040B7DB /* Assets.xcassets */; };
 		C7A38E6925A675BC0040B7DB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7A38E6725A675BC0040B7DB /* LaunchScreen.storyboard */; };
@@ -25,13 +27,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4169114125BA68D200FCB162 /* ProductFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFormViewModel.swift; sourceTree = "<group>"; };
+		4169114525BA691C00FCB162 /* CoreDataNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataNetwork.swift; sourceTree = "<group>"; };
+		41ACFF4225BA44F000C2BF13 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
 		C73AD69125AE2C0300F92F92 /* PurchaseTotalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PurchaseTotalViewController.swift; sourceTree = "<group>"; };
 		C73AD69425AE389800F92F92 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		C749CEB025AE77840032637F /* String+isDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+isDouble.swift"; sourceTree = "<group>"; };
 		C799043925A7F72600B8005D /* UIViewController+Context.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Context.swift"; sourceTree = "<group>"; };
 		C7A38E5925A675BB0040B7DB /* BrunoDemetriusDorenaltoMarcelo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrunoDemetriusDorenaltoMarcelo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7A38E5C25A675BB0040B7DB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C7A38E6025A675BB0040B7DB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C7A38E6325A675BB0040B7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C7A38E6525A675BC0040B7DB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C7A38E6825A675BC0040B7DB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4169114425BA68FA00FCB162 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				4169114525BA691C00FCB162 /* CoreDataNetwork.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
 		C73AD68F25AE2B7500F92F92 /* PurchaseTotal */ = {
 			isa = PBXGroup;
 			children = (
@@ -90,6 +102,7 @@
 		C7A38E5B25A675BB0040B7DB /* BrunoDemetriusDorenaltoMarcelo */ = {
 			isa = PBXGroup;
 			children = (
+				4169114425BA68FA00FCB162 /* Core */,
 				C73AD68F25AE2B7500F92F92 /* PurchaseTotal */,
 				C7B05A1125AA2FA400C9E594 /* SettingsForm */,
 				C7A38E8725A6A8EA0040B7DB /* ProductForm */,
@@ -98,7 +111,6 @@
 				C7A38E7725A680CE0040B7DB /* ProductListing */,
 				C7A38E7325A67D150040B7DB /* Main */,
 				C7A38E7425A67D1E0040B7DB /* Supporting Files */,
-				C7A38E6025A675BB0040B7DB /* ViewController.swift */,
 				C7A38E6225A675BB0040B7DB /* Main.storyboard */,
 			);
 			path = BrunoDemetriusDorenaltoMarcelo;
@@ -125,18 +137,11 @@
 		C7A38E7725A680CE0040B7DB /* ProductListing */ = {
 			isa = PBXGroup;
 			children = (
+				C7A38E7925A681380040B7DB /* ProductsTableViewController.swift */,
+				41ACFF4225BA44F000C2BF13 /* ProductListViewModel.swift */,
 				C7A38E7C25A68B2C0040B7DB /* View */,
-				C7A38E7825A680E40040B7DB /* Controller */,
 			);
 			path = ProductListing;
-			sourceTree = "<group>";
-		};
-		C7A38E7825A680E40040B7DB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C7A38E7925A681380040B7DB /* ProductsTableViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		C7A38E7C25A68B2C0040B7DB /* View */ = {
@@ -169,17 +174,10 @@
 		C7A38E8725A6A8EA0040B7DB /* ProductForm */ = {
 			isa = PBXGroup;
 			children = (
-				C7A38E8825A6A8F90040B7DB /* Controller */,
+				C7A38E8925A6A93C0040B7DB /* ProductFormViewController.swift */,
+				4169114125BA68D200FCB162 /* ProductFormViewModel.swift */,
 			);
 			path = ProductForm;
-			sourceTree = "<group>";
-		};
-		C7A38E8825A6A8F90040B7DB /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C7A38E8925A6A93C0040B7DB /* ProductFormViewController.swift */,
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		C7B05A1125AA2FA400C9E594 /* SettingsForm */ = {
@@ -279,12 +277,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7A38E8525A699C30040B7DB /* BrunoDemetriusDorenaltoMarcelo.xcdatamodeld in Sources */,
+				4169114625BA691C00FCB162 /* CoreDataNetwork.swift in Sources */,
 				C749CEB125AE77840032637F /* String+isDouble.swift in Sources */,
+				4169114225BA68D200FCB162 /* ProductFormViewModel.swift in Sources */,
 				C73AD69225AE2C0300F92F92 /* PurchaseTotalViewController.swift in Sources */,
-				C7A38E6125A675BB0040B7DB /* ViewController.swift in Sources */,
 				C7A38E8A25A6A93C0040B7DB /* ProductFormViewController.swift in Sources */,
 				C799043A25A7F72600B8005D /* UIViewController+Context.swift in Sources */,
 				C7A38E7E25A68B5E0040B7DB /* ProductTableViewCell.swift in Sources */,
+				41ACFF4325BA44F000C2BF13 /* ProductListViewModel.swift in Sources */,
 				C7A38E7A25A681380040B7DB /* ProductsTableViewController.swift in Sources */,
 				C7B05A1425AA309000C9E594 /* SettingsFormViewController.swift in Sources */,
 				C7AAD7F625AD139900DCA29E /* Product+Poster.swift in Sources */,
@@ -437,7 +437,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "BrunoDemetriusDorenaltoMarcelo/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,7 +445,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FIAP.BrunoDemetriusDorenaltoMarcelo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -456,7 +456,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "BrunoDemetriusDorenaltoMarcelo/Supporting Files/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -464,7 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = FIAP.BrunoDemetriusDorenaltoMarcelo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

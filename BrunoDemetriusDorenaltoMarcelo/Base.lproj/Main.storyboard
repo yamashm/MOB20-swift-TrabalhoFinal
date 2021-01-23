@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cd9-5U-XZP">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cd9-5U-XZP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -189,23 +189,21 @@
                                     </view>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="4Cy-Jk-g8W" firstAttribute="top" secondItem="qwW-IY-cwg" secondAttribute="top" id="BSc-2T-FMv"/>
-                                    <constraint firstItem="4Cy-Jk-g8W" firstAttribute="bottom" secondItem="qwW-IY-cwg" secondAttribute="bottom" id="EHD-nl-IbZ"/>
-                                    <constraint firstItem="4Cy-Jk-g8W" firstAttribute="width" secondItem="58N-dk-lNi" secondAttribute="width" id="dS1-vr-hvi"/>
-                                    <constraint firstItem="4Cy-Jk-g8W" firstAttribute="leading" secondItem="qwW-IY-cwg" secondAttribute="leading" id="hsL-DD-qcP"/>
-                                    <constraint firstItem="4Cy-Jk-g8W" firstAttribute="trailing" secondItem="qwW-IY-cwg" secondAttribute="trailing" id="pX7-h5-F9I"/>
+                                    <constraint firstItem="4Cy-Jk-g8W" firstAttribute="top" secondItem="Vv8-rP-8bb" secondAttribute="top" id="BSc-2T-FMv"/>
+                                    <constraint firstItem="4Cy-Jk-g8W" firstAttribute="bottom" secondItem="Vv8-rP-8bb" secondAttribute="bottom" id="EHD-nl-IbZ"/>
+                                    <constraint firstItem="4Cy-Jk-g8W" firstAttribute="width" secondItem="Vv8-rP-8bb" secondAttribute="width" id="dS1-vr-hvi"/>
+                                    <constraint firstItem="4Cy-Jk-g8W" firstAttribute="leading" secondItem="Vv8-rP-8bb" secondAttribute="leading" id="hsL-DD-qcP"/>
+                                    <constraint firstItem="4Cy-Jk-g8W" firstAttribute="trailing" secondItem="Vv8-rP-8bb" secondAttribute="trailing" id="pX7-h5-F9I"/>
                                 </constraints>
-                                <viewLayoutGuide key="contentLayoutGuide" id="qwW-IY-cwg"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="58N-dk-lNi"/>
                             </scrollView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="3bA-fg-9uO"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Vv8-rP-8bb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8k7-eU-m2h"/>
-                            <constraint firstItem="Vv8-rP-8bb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BQm-tR-8Jz"/>
-                            <constraint firstItem="Vv8-rP-8bb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="n5F-Zc-Qgd"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Vv8-rP-8bb" secondAttribute="bottom" id="x08-bs-vWb"/>
+                            <constraint firstItem="Vv8-rP-8bb" firstAttribute="leading" secondItem="3bA-fg-9uO" secondAttribute="leading" id="8k7-eU-m2h"/>
+                            <constraint firstItem="Vv8-rP-8bb" firstAttribute="top" secondItem="3bA-fg-9uO" secondAttribute="top" id="BQm-tR-8Jz"/>
+                            <constraint firstItem="Vv8-rP-8bb" firstAttribute="trailing" secondItem="3bA-fg-9uO" secondAttribute="trailing" id="n5F-Zc-Qgd"/>
+                            <constraint firstItem="3bA-fg-9uO" firstAttribute="bottom" secondItem="Vv8-rP-8bb" secondAttribute="bottom" id="x08-bs-vWb"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Cadastrar Produto" largeTitleDisplayMode="never" id="a37-1z-r7E"/>
@@ -341,16 +339,16 @@
                                 </constraints>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="RbN-yJ-93u"/>
+                        <viewLayoutGuide key="safeArea" id="ION-JD-fCh"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="HYX-sB-0s3" firstAttribute="top" secondItem="Rdv-XR-sPa" secondAttribute="bottom" constant="48" id="1MI-gu-qmU"/>
-                            <constraint firstItem="RbN-yJ-93u" firstAttribute="trailing" secondItem="Rdv-XR-sPa" secondAttribute="trailing" constant="20" id="3rb-L8-Occ"/>
-                            <constraint firstItem="Rdv-XR-sPa" firstAttribute="leading" secondItem="RbN-yJ-93u" secondAttribute="leading" constant="20" id="PGc-NJ-Sv5"/>
-                            <constraint firstItem="RbN-yJ-93u" firstAttribute="bottom" secondItem="HYX-sB-0s3" secondAttribute="bottom" constant="48" id="a3J-RW-LAV"/>
-                            <constraint firstItem="HYX-sB-0s3" firstAttribute="leading" secondItem="RbN-yJ-93u" secondAttribute="leading" constant="20" id="goa-lY-ODB"/>
-                            <constraint firstItem="RbN-yJ-93u" firstAttribute="trailing" secondItem="HYX-sB-0s3" secondAttribute="trailing" constant="20" id="uBK-Oz-lTz"/>
-                            <constraint firstItem="Rdv-XR-sPa" firstAttribute="top" secondItem="RbN-yJ-93u" secondAttribute="top" constant="32" id="ueb-gk-OI6"/>
+                            <constraint firstItem="ION-JD-fCh" firstAttribute="trailing" secondItem="Rdv-XR-sPa" secondAttribute="trailing" constant="20" id="3rb-L8-Occ"/>
+                            <constraint firstItem="Rdv-XR-sPa" firstAttribute="leading" secondItem="ION-JD-fCh" secondAttribute="leading" constant="20" id="PGc-NJ-Sv5"/>
+                            <constraint firstItem="ION-JD-fCh" firstAttribute="bottom" secondItem="HYX-sB-0s3" secondAttribute="bottom" constant="48" id="a3J-RW-LAV"/>
+                            <constraint firstItem="HYX-sB-0s3" firstAttribute="leading" secondItem="ION-JD-fCh" secondAttribute="leading" constant="20" id="goa-lY-ODB"/>
+                            <constraint firstItem="ION-JD-fCh" firstAttribute="trailing" secondItem="HYX-sB-0s3" secondAttribute="trailing" constant="20" id="uBK-Oz-lTz"/>
+                            <constraint firstItem="Rdv-XR-sPa" firstAttribute="top" secondItem="ION-JD-fCh" secondAttribute="top" constant="32" id="ueb-gk-OI6"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Ajustes" image="gearshape.2.fill" catalog="system" id="SII-hH-vMT"/>
@@ -414,12 +412,12 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="tIG-CC-3AZ"/>
+                        <viewLayoutGuide key="safeArea" id="hBt-5U-tk2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="W1t-q1-tRE" firstAttribute="top" secondItem="tIG-CC-3AZ" secondAttribute="top" constant="64" id="Ake-H8-XCS"/>
-                            <constraint firstItem="tIG-CC-3AZ" firstAttribute="trailing" secondItem="W1t-q1-tRE" secondAttribute="trailing" id="GBJ-u8-Lvf"/>
-                            <constraint firstItem="W1t-q1-tRE" firstAttribute="leading" secondItem="tIG-CC-3AZ" secondAttribute="leading" id="mEP-ie-aap"/>
+                            <constraint firstItem="W1t-q1-tRE" firstAttribute="top" secondItem="hBt-5U-tk2" secondAttribute="top" constant="64" id="Ake-H8-XCS"/>
+                            <constraint firstItem="hBt-5U-tk2" firstAttribute="trailing" secondItem="W1t-q1-tRE" secondAttribute="trailing" id="GBJ-u8-Lvf"/>
+                            <constraint firstItem="W1t-q1-tRE" firstAttribute="leading" secondItem="hBt-5U-tk2" secondAttribute="leading" id="mEP-ie-aap"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Total da Compra" image="case.fill" catalog="system" id="unI-7J-uV7"/>
