@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41413CCE25BDE4360095EF21 /* SettingsFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41413CCD25BDE4360095EF21 /* SettingsFormViewModel.swift */; };
 		4169114225BA68D200FCB162 /* ProductFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169114125BA68D200FCB162 /* ProductFormViewModel.swift */; };
 		4169114625BA691C00FCB162 /* CoreDataNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4169114525BA691C00FCB162 /* CoreDataNetwork.swift */; };
 		41ACFF4325BA44F000C2BF13 /* ProductListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41ACFF4225BA44F000C2BF13 /* ProductListViewModel.swift */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		41413CCD25BDE4360095EF21 /* SettingsFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFormViewModel.swift; sourceTree = "<group>"; };
 		4169114125BA68D200FCB162 /* ProductFormViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFormViewModel.swift; sourceTree = "<group>"; };
 		4169114525BA691C00FCB162 /* CoreDataNetwork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataNetwork.swift; sourceTree = "<group>"; };
 		41ACFF4225BA44F000C2BF13 /* ProductListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewModel.swift; sourceTree = "<group>"; };
@@ -183,25 +185,10 @@
 		C7B05A1125AA2FA400C9E594 /* SettingsForm */ = {
 			isa = PBXGroup;
 			children = (
-				C7DCF31E25ABCC2900AEC995 /* View */,
-				C7B05A1225AA2FB000C9E594 /* Controller */,
+				C7B05A1325AA309000C9E594 /* SettingsFormViewController.swift */,
+				41413CCD25BDE4360095EF21 /* SettingsFormViewModel.swift */,
 			);
 			path = SettingsForm;
-			sourceTree = "<group>";
-		};
-		C7B05A1225AA2FB000C9E594 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				C7B05A1325AA309000C9E594 /* SettingsFormViewController.swift */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		C7DCF31E25ABCC2900AEC995 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -283,6 +270,7 @@
 				C73AD69225AE2C0300F92F92 /* PurchaseTotalViewController.swift in Sources */,
 				C7A38E8A25A6A93C0040B7DB /* ProductFormViewController.swift in Sources */,
 				C799043A25A7F72600B8005D /* UIViewController+Context.swift in Sources */,
+				41413CCE25BDE4360095EF21 /* SettingsFormViewModel.swift in Sources */,
 				C7A38E7E25A68B5E0040B7DB /* ProductTableViewCell.swift in Sources */,
 				41ACFF4325BA44F000C2BF13 /* ProductListViewModel.swift in Sources */,
 				C7A38E7A25A681380040B7DB /* ProductsTableViewController.swift in Sources */,
