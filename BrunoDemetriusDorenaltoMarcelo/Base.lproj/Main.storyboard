@@ -272,7 +272,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                         <connections>
-                                                            <action selector="xrateChanged:" destination="vGe-PF-o5O" eventType="primaryActionTriggered" id="eEO-O1-Thr"/>
+                                                            <action selector="xrateChanged:" destination="vGe-PF-o5O" eventType="editingChanged" id="wNa-bf-etb"/>
                                                         </connections>
                                                     </textField>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OmH-s9-iJv">
@@ -280,7 +280,7 @@
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                                                         <connections>
-                                                            <action selector="operationTaxChanged:" destination="vGe-PF-o5O" eventType="primaryActionTriggered" id="DJm-ex-ApU"/>
+                                                            <action selector="operationTaxChanged:" destination="vGe-PF-o5O" eventType="editingChanged" id="dJ2-Te-C9B"/>
                                                         </connections>
                                                     </textField>
                                                 </subviews>

@@ -1,7 +1,7 @@
 import UIKit
 import CoreData
 
-class SettingsFormViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+final class SettingsFormViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     // MARK: - IBOutlets
     @IBOutlet weak var textFieldXRate: UITextField!
@@ -34,6 +34,7 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+
         viewModel.loadStates()
         setupView()
     }
@@ -41,21 +42,26 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
     // MARK: - IBActions
     @IBAction func addState(_ sender: UIButton) {
         showStateAlert()
-        viewModel.loadStates()
     }
 
     @IBAction func xrateChanged(_ sender: UITextField) {
-        ud.set(sender.text!, forKey: "xrate")
-        sender.resignFirstResponder()
+        guard let text = sender.text else {
+            return
+        }
+
+        ud.set(text, forKey: "xrate")
     }
 
     @IBAction func operationTaxChanged(_ sender: UITextField) {
-        ud.set(sender.text!, forKey: "operationtax")
-        sender.resignFirstResponder()
+        guard let text = sender.text else {
+            return
+        }
+
+        ud.set(text, forKey: "operationtax")
     }
 
     // MARK: - Methods
-    private func showStateAlert(for state: State? = nil){
+    private func showStateAlert(for state: State? = nil) {
         let title = state == nil ? "Adicionar Estado" : "Editar Estado"
         let alert = UIAlertController(title: title, message: nil, preferredStyle: .alert)
 
@@ -67,6 +73,7 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
         alert.addTextField { (textField) in
             textField.placeholder = "Imposto"
             textField.keyboardType = UIKeyboardType.numbersAndPunctuation
+
             if let stateContent = state {
                 textField.text = String(format: "%.1f", stateContent.tax)
             } else {
@@ -75,23 +82,19 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
         }
 
         let okAction = UIAlertAction(title: "Adicionar", style: .default) { (_) in
-            let state = state ?? State(context: self.context)
-            state.name = alert.textFields?[0].text
+            self.viewModel.initState()
+
+            self.viewModel.state?.name = alert.textFields?[0].text
 
             if let alertTextFieldsContent = alert.textFields {
-                if let textContent = alertTextFieldsContent[1].text{
+                if let textContent = alertTextFieldsContent[1].text {
                     if let doubleContent = Double(textContent) {
-                        state.tax = doubleContent
+                        self.viewModel.state?.tax = doubleContent
                     }
                 }
             }
 
-            do {
-                try self.context.save()
-                self.viewModel.loadStates()
-            } catch {
-                print(error)
-            }
+            self.viewModel.saveState()
         }
 
         alert.addAction(okAction)
@@ -116,12 +119,12 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
         tableViewStateTax.backgroundView = count > 0 ? nil : label
         return count
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableViewStateTax.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-        
+
         let state = viewModel.getState(at: indexPath.row)
-        
+
         cell.detailTextLabel?.text = String(format: "%.1f", state.tax)
         cell.textLabel?.text = state.name
         
@@ -132,7 +135,6 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
         
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completionHandler) in
             self.viewModel.deleteState(at: indexPath.row)
-//            self.states.remove(at: indexPath.row)
             self.tableViewStateTax.deleteRows(at: [indexPath], with: .automatic)
 
             completionHandler(true)
@@ -146,14 +148,24 @@ class SettingsFormViewController: UIViewController, UITableViewDelegate, UITable
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         showStateAlert(for: viewModel.getState(at: indexPath.row))
     }
+
+    private func showErrorAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 extension SettingsFormViewController: SettingsFormViewModelDelegate {
     func onSucess() {
-        
+        DispatchQueue.main.async {
+            self.tableViewStateTax.reloadData()
+        }
     }
 
     func onError(error: String) {
-        
+        DispatchQueue.main.async {
+            self.showErrorAlert(title: "Alerta!", message: error)
+        }
     }
 }

@@ -150,12 +150,14 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
 
     @objc func donePicker() {
         let row = pikerViewState.selectedRow(inComponent: 0)
-        let state = viewModel.getState(at: row)
+        if viewModel.countStates > 0 {
+            let state = viewModel.getState(at: row)
 
-        pikerViewState.selectRow(row, inComponent: 0, animated: false)
-        selectedState = state
-        textFieldState.text = state.name
-        textFieldState.resignFirstResponder()
+            pikerViewState.selectRow(row, inComponent: 0, animated: false)
+            selectedState = state
+            textFieldState.text = state.name
+            textFieldState.resignFirstResponder()
+        }
     }
 
     @objc func cancelPicker() {

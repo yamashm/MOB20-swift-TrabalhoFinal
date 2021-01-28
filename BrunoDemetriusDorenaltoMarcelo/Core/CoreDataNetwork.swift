@@ -9,6 +9,7 @@ protocol CoreDataNetworking {
     func deleteProduct(_ product: Product, _ completion: @escaping (Result<String, Error>) -> Void)
     func getAllStates(_ completion: @escaping (Result<[State], Error>) -> Void)
     func deleteState(_ state: State, _ completion: @escaping (Result<String, Error>) -> Void)
+    func saveState(_ state: State, _ completion: @escaping (Result<String, Error>) -> Void)
 }
 
 class CoreDataNetwork: CoreDataNetworking {
@@ -77,6 +78,16 @@ class CoreDataNetwork: CoreDataNetworking {
     func deleteState(_ state: State, _ completion: @escaping (Result<String, Error>) -> Void) {
         do {
             context.delete(state)
+            try context.save()
+            completion(.success("Excluído com sucesso!"))
+        } catch let error {
+            completion(.failure(error))
+        }
+    }
+
+    func saveState(_ state: State, _ completion: @escaping (Result<String, Error>) -> Void) {
+        do {
+            context.insert(state)
             try context.save()
             completion(.success("Excluído com sucesso!"))
         } catch let error {
