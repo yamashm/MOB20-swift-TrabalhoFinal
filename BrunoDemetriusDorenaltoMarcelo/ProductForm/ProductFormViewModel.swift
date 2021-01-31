@@ -28,6 +28,10 @@ class ProductFormViewModel {
     func getState(at index: Int) -> State {
         states[index]
     }
+    
+    func stateExists(state: State) -> Bool {
+        return states.contains(state)
+    }
 
     func loadStates() {
         service.getAllStates { [weak self] result in

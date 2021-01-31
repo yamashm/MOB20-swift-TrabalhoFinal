@@ -41,7 +41,7 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
         textFieldState.inputAccessoryView = toolBar
 
         setupView()
-        viewModel.loadStates()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -50,6 +50,15 @@ class ProductFormViewController: UIViewController, UIPickerViewDataSource, UIPic
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         //Observa o evento do teclado desaparecer
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+        
+        viewModel.loadStates()
+        
+        if let selectedStateContent = selectedState{
+            if(!viewModel.stateExists(state: selectedStateContent)){
+                navigationController?.popToRootViewController(animated: true)
+            }
+        }
+        
     }
 
     override func viewWillDisappear(_ animated: Bool) {

@@ -35,6 +35,8 @@ class ProductsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if viewModel.count == 0 {
             tableView.backgroundView = label
+        } else {
+            tableView.backgroundView = nil
         }
 
         return viewModel.count
